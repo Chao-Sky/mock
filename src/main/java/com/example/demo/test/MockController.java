@@ -30,4 +30,20 @@ public class MockController {
         Object resp = JSON.parse(respStr);
         return resp;
     }
+
+    @RequestMapping("/queryRefundNo")
+    public Object queryRefundNo() {
+        String respStr = "{\n" +
+                "    \"code\": 0,\n" +
+                "    \"message\": \"成功\",\n" +
+                "\t\"content\": [\n" +
+                "\t\t{\n" +
+                "\t\t\t\"refundStatus\":\"4\"\n" +
+                "\t\t}\n" +
+                "\t]\n" +
+                "}";
+
+        Object resp = JSON.parse(respStr);
+        return resp;
+    }
 }
